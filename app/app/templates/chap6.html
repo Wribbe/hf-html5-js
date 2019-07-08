@@ -5,13 +5,11 @@
     <meta charset="uft-8">
     <script src="{{ url_for("static", filename="js/mightygumball.js") }}"></script>
     <link rel="stylesheet" href="{{ url_for("static", filename="mightygumball.css") }}">
-    <script>
-      URL_SALES = '{{ url_for("sales") }}';
-    </script>
   </head>
   <body>
     <h1>Mighty Gumball Sales</h1>
     <div id="sales">
     </div>
+    <script src="http://gumball.wickedlysmart.com/?callback=updateSales"></script>
   </body>
 </html>
