@@ -4,9 +4,9 @@ from flask import Flask, url_for, render_template, request
 
 app = Flask(__name__)
 
-@app.route('/chap6', methods=['GET'])
-def chap6():
-  return render_template("chap6.html", request=request)
+@app.route('/chap/<number>', methods=['GET'])
+def chap(number):
+  return render_template(f"chap{number}.html", request=request)
 
 @app.route('/api/sales')
 def sales():
