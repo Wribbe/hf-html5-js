@@ -16,6 +16,10 @@ function previewHandler() {
     for (var squares=0; squares < 20; squares++) {
       drawSquare(canvas, context);
     }
+  } else if (shape == "circles") {
+    for (var circles=0; circles < 20; circles++) {
+      drawCircle(canvas, context);
+    }
   }
 }
 
@@ -34,4 +38,15 @@ function fillBackgroundColor(canvas, context) {
   var bgColor = selectObj.options[index].value;
   context.fillStyle = bgColor;
   context.fillRect(0, 0, canvas.width, canvas.height);
+}
+
+function drawCircle(canvas, context) {
+  var radius = Math.floor(Math.random() * 40);
+  var x = Math.floor(Math.random() * canvas.width);
+  var y = Math.floor(Math.random() * canvas.height);
+
+  context.beginPath();
+  context.arc(x, y, radius, 0, Math.PI*2, true);
+  context.fillStyle = "lightblue";
+  context.fill();
 }
