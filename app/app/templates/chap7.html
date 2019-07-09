@@ -2,13 +2,46 @@
 <html lang="en">
   <head>
     <meta charset='utf-8'>
-    <title></title>
+    <title>TweetShirt</title>
     <link rel="stylesheet" href="{{ url_for("static", filename="chap7.css") }}">
     <script src="{{ url_for('static', filename="chap7.js") }}"></script>
   </head>
   <body>
+    <h1>TweetShirt</h1>
     <canvas id="tshirtCanvas" width="600" height="200">
-      Hey you, yes YOU, upgrade your browser!!
+      <p>Please upgrade your browser to use TweetShirt!</p>
     </canvas>
   </body>
+  <form>
+    <p>
+      <label for="backgroundColor">Select background color:</label>
+      <select id="backgroundColor">
+        <option value="white" selected="selected">White</option>
+        <option value="black" >Black</option>
+      </select>
+    </p>
+    <p>
+      <label for="shape">Circles or squares?:</label>
+      <select id="shape">
+        <option value="none" selected="selected">Neither</option>
+        <option value="circles">Circles</option>
+        <option value="squares">Squares</option>
+      </select>
+    </p>
+    <p>
+      <label for="">Select text color:</label>
+      <select id="foregroundColor">
+        <option value="black" selected="selected">Black</option>
+        <option value="white">White</option>
+      </select>
+    </p>
+    <p>
+      <label for="tweets">Pick a tweet:</label>
+      <select id="tweets">
+      </select>
+    </p>
+    <p>
+      <input type="button" id="previewButton" value="Preview">
+    </p>
+  </form>
 </html>
